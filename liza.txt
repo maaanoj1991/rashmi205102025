@@ -2,6 +2,7 @@
 1st line of liza file on Hanuman branch
 
 
+<<<<<<< HEAD
 =======
 this is the 1st line of liza file on branch love
 <<<<<<< HEAD
@@ -10,3 +11,8 @@ this is the 1st line of liza file on branch love
 
 this is 2nd line of liza file of branch love
 >>>>>>> a07f851 (this is line of 2nd coomit, of liza file on branch love)
+=======
+this is the 1st line of liza file on branch love
+
+this is 2nd line of liza file of branch love
+>>>>>>> 4f00c0f6049cebdfe2e0cccf7bada1832ad9607f
