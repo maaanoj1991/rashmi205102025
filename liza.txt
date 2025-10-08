@@ -1,3 +1,7 @@
+<<<<<<< HEAD
 1st line of liza file on Hanuman branch
 
 
+=======
+this is the 1st line of liza file on branch love
+>>>>>>> 6daef16 (this is 1st commit)
