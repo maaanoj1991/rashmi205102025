@@ -1,9 +1,8 @@
-FROM centos:7
+FROM quay.io/centos/centos:stream9
 
-RUN yum -y update && yum -y install httpd && yum clean all
+RUN dnf -y update && dnf -y install httpd && dnf clean all
 
 EXPOSE 80
 
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-
 
