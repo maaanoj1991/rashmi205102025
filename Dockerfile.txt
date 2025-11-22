@@ -11,10 +11,10 @@ COPY Dockerfile  /root/
 
 #COPY aa.txt /mnt/
 
-ADD apache-tomcat-8.5.89.tar.gz  /opt
+#ADD apache-tomcat-8.5.89.tar.gz  /opt
 
-WORKDIR /opt/apache-tomcat-8.5.89/bin/
+#WORKDIR /opt/apache-tomcat-8.5.89/bin/
 
 EXPOSE 8080 8085 8081 443
 
-CMD ["/opt/apache-tomcat-8.5.89/bin/catalina.sh","run"]
+#CMD ["/opt/apache-tomcat-8.5.89/bin/catalina.sh","run"]
