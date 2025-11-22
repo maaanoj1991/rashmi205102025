@@ -1,7 +1,9 @@
 FROM centos:7
 
-# Update packages
-RUN yum -y update && yum clean all
+RUN yum -y update && yum -y install httpd && yum clean all
 
-CMD ["/bin/bash"]
+EXPOSE 80
+
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+
 
