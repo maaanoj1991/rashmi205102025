@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp1
-  namespace: tg
+  namespace: manoj
 spec:
   replicas: 5
   selector:
@@ -17,6 +17,6 @@ spec:
        - name: passwd-for-custom-di
      containers:
        - name: tomcat
-         image:  cdtsbikaner/devops150624:BUILD_NUMBER
+         image:  maanoj1991/tomcat:BUILD_NUMBER
          ports:
           - containerPort: 8080
