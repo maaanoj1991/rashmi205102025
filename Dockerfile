@@ -1,8 +1,20 @@
-FROM quay.io/centos/centos:stream9
+FROM centos:7
 
-RUN dnf -y update && dnf -y install httpd && dnf install -y bind-utils && dnf install nmap -y
+MAINTAINER "harman@gmail.com"
 
-EXPOSE 80
+RUN sed -i  's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-*  &&  \
+    sed -i  's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g'  /etc/yum.repos.d/CentOS-*
 
-CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+RUN yum install java-devel net-tool netstat vim bind-utils procps -y
 
+COPY Dockerfile  /root/
+
+#COPY aa.txt /mnt/
+
+#ADD apache-tomcat-8.5.89.tar.gz  /opt
+
+#WORKDIR /opt/apache-tomcat-8.5.89/bin/
+
+EXPOSE 8080 8085 8081 443
+
+#CMD ["/opt/apache-tomcat-8.5.89/bin/catalina.sh","run"]
